@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario  con HTML5 Y CSS3</title>
+    <link rel="stylesheet" href="css/estilos_formulario.css">
+</head>
+<body>
+    <div class="contenedor">
+        <label for="titulo" class="titulo">Registro de Usuarios</label> 
+        <form action="alta_usuario.php" method="post" onsubmit="return validarFormulario()" class="formulario"  name="formulario" >
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" class="form-control"  required>
+            <span class="error-message" id="nombreError">Nombre no válido.</span>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" id="apellidos" placeholder="Escribe tus apellidos" class="form-control"  required>
+            <span class="error-message" id="apellidosError">Apellidos no válidos.</span>
+
+            <label for="genero">Seleccione su género:</label>
+            <div class="radio">
+                <input type="radio" value="M" name="genero" id="M" required>
+                <label for="M" id="mas">Masculino</label>
+                <input type="radio"  value="F" name="genero" id="F">
+                <label for="F" id="fem">Femenino</label>
+            </div>
+            <span class="error-message" id="generoError">Selecciona un género.</span>
+
+            <label for="apellidos">Domicilio:</label>
+            <input type="text" name="domicilio" id="domicilio" placeholder="Escribe el domicilio" class="form-control"  required>
+            <span class="error-message" id="domicilioError">Ingresa el domicilio.</span>
+            <div class="checkbox">
+                <input type="checkbox" name="checkbox" id="checkbox" class="form-control"  required>
+                <label for="checkbox">Acepto términos y condiciones</label>
+                <span class="error-message" id="terminosError">Acepta los términos y condiciones.</span>
+            </div>
+
+            <div class="btn-group">
+                <input type="reset" value="Cancelar" class="cancelar">
+                <input type="submit" value="Registrar" class="guardar">
+                
+            </div>
+        </form>
+    </div>
+    <script src="js/instrucciones.js"></script>
+</body>
+</html>

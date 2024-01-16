@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrado</title>
+    <link rel="stylesheet" href="css/estilos_formulario.css">
+</head>
+<body>
+    <div class="contenedor">
+        <label for="titulo" class="titulo">Registro de Usuarios</label> 
+        <form action="alta_usuario.php" method="post" onsubmit="return validarFormulario()" class="formulario_nombre"  name="formulario_nombre" >
+            <label for="usuario">Usuario:</label>
+            <input type="text" name="usuario" id="nombre" placeholder="Escribe tu usuario" class="form-control"  required>
+            <span class="error-message" id="usuarioError">Usuario no válido.</span>
+
+            <label for="contraseña">Contraseña:</label>
+            <input type="text" name="contraseña" id="contraseña" placeholder="Escribe tu contraseña" class="form-control"  required>
+            <span class="error-message" id="contraseñaError">Contraseña no válida.</span>
+
+            <div class="btn-group">
+                <input type="reset" value="Cancelar" class="cancelar">
+                <input type="submit" value="Registrar" class="guardar">   
+            </div>
+        </form>
+    </div>
+        <script src="js/instrucciones.js"></script>    
+</body>
+</html>
